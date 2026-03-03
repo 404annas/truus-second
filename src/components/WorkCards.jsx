@@ -173,7 +173,7 @@ const WorkCards = () => {
       {/* <img src={orangeDoodle2} alt="" className="absolute left-6 bottom-8 w-24 md:w-32 pointer-events-none" /> */}
       {/* <img src={blueDoodle} alt="" className="absolute right-4 top-20 w-16 md:w-24 pointer-events-none" /> */}
       {/* <img src={pinkDoodle} alt="" className="absolute right-16 top-36 w-10 md:w-14 pointer-events-none" /> */}
-      <img src={arrowDoodle} alt="" className="absolute right-10 bottom-32 w-16 md:w-24 pointer-events-none rotate-12" />
+      <img src={arrowDoodle} alt="" className="absolute left-[61%] top-10 w-16 md:w-40 pointer-events-none rotate-20" />
       {/* <img src={curlyDoodle} alt="" className="absolute left-1/2 -translate-x-1/2 top-8 w-14 md:w-20 pointer-events-none" /> */}
 
             <div className="max-w-7xl mx-auto pt-10">
