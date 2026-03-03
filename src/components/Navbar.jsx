@@ -111,7 +111,7 @@ const Navbar = () => {
               alt=""
             />
             <Link
-              to="/work"
+              to="/"
               onClick={() => scrollTo(0, 0)}
               className={`${hover ? "text-black" : baseTextColor} z-50 relative font-extrabold max-md:text-3xl max-xl:text-4xl transition-all duration-200 ease-in-out text-3xl epilogue`}
             >
