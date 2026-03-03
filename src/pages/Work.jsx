@@ -1,8 +1,8 @@
-import React from 'react'
-import WorkCards from '../components/WorkCards'
+import React from "react";
+import WorkCards from "../components/WorkCards";
 
 const Work = () => {
-  return <WorkCards />
-}
+  return <WorkCards />;
+};
 
-export default Work
+export default Work;

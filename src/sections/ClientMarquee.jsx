@@ -70,7 +70,7 @@ const ClientsMarquee = () => {
     }, []);
 
     return (
-        <section className="relative max-w-7xl lg:pr-10 mx-auto min-h-screen bg-[#F3EEE7] flex items-center overflow-hidden">
+        <section data-navbar-theme="light" className="relative max-w-7xl lg:pr-10 mx-auto min-h-screen bg-[#F3EEE7] flex items-center overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center w-full ">
 
                 {/* --- Left Static Section --- */}

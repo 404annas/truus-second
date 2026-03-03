@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
+import ClickCursor from './components/ClickCursor'
 import Home from './pages/Home'
 import Work from './pages/Work'
 import Footer from './sections/Footer'
@@ -10,6 +11,7 @@ function AppLayout() {
 
   return (
     <>
+      <ClickCursor />
       <Navbar />
       <main className={pathname === '/' ? '' : 'pt-28'}>
         <Routes>

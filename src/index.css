@@ -40,6 +40,101 @@ a,link,.pointer{
 
 }
 
+.project-carousel .swiper-slide {
+  cursor: none;
+}
+
+.project-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  z-index: 60;
+}
+
+.project-cursor.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-cursor__pill {
+  background: #d59de8;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-transform: lowercase;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.project-cursor__icon {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+[data-cursor-click] {
+  cursor: none;
+}
+
+.click-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  z-index: 70;
+}
+
+.click-cursor.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.click-cursor__pill {
+  background: #d59de8;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  text-transform: lowercase;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.click-cursor__icon {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+
+.logo-on-dark {
+  filter: brightness(0) invert(1);
+}
+
+.logo-on-light {
+  filter: brightness(0);
+}
+
 /* Add these custom animation keyframes */
 
 @keyframes marquee-up {

@@ -12,11 +12,34 @@ import greenDoodle from '../assets/svgs/greenDoodle.svg';
 import blueDoodle from '../assets/svgs/blue-doodle.svg';
 import smileySticker from '../assets/svgs/smile.svg';
 
+import { useEffect, useRef, useState } from 'react';
 import AnimatedSvgPath from '../SvgComponents/AnimatedSvgPath';
 import { Carousel_002 } from '../components/Carosel_002';
 import Twolines from '../SvgComponents/Twolines';
 
 const Projects = () => {
+    const cursorRef = useRef(null);
+    const [cursorVisible, setCursorVisible] = useState(false);
+    const cursorActiveRef = useRef(false);
+
+    useEffect(() => {
+        const handleScroll = () => setCursorVisible(false);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const handleCursorMove = (event) => {
+        if (!cursorRef.current) return;
+        cursorRef.current.style.left = `${event.clientX}px`;
+        cursorRef.current.style.top = `${event.clientY}px`;
+
+        const target = document.elementFromPoint(event.clientX, event.clientY);
+        const isOverCard = Boolean(target?.closest(".swiper-slide"));
+        if (cursorActiveRef.current !== isOverCard) {
+            cursorActiveRef.current = isOverCard;
+            setCursorVisible(isOverCard);
+        }
+    };
 
     const images = [
         {
@@ -102,8 +125,20 @@ const Projects = () => {
     ];
 
     return (
-        <section className="relative w-full bg-black text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen">
-            <div className="relative flex-1 flex justify-center items-center mt-10">
+        <section
+            data-navbar-theme="dark"
+            className="relative w-full bg-black text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen"
+            onMouseMove={handleCursorMove}
+            onMouseLeave={() => {
+                cursorActiveRef.current = false;
+                setCursorVisible(false);
+            }}
+        >
+            <div className="relative flex-1 flex justify-center items-center mt-10 project-cursor-zone">
+                <div ref={cursorRef} className={`project-cursor ${cursorVisible ? 'is-visible' : ''}`}>
+                    <span className="project-cursor__pill">drag</span>
+                    <img className="project-cursor__icon" src="/cursor.svg" alt="" aria-hidden="true" />
+                </div>
                 <AnimatedSvgPath
                     color={"white"}
                     className="absolute left-0 sm:left-[25%] -top-2 lg:top-0  w-16 h-auto md:w-24 z-10 max-lg:rotate-12"
@@ -117,6 +152,7 @@ const Projects = () => {
                     images={images}
                     loop={true}
                     spaceBetween={"1000px"}
+                    className="project-carousel"
                 />
             </div>
 

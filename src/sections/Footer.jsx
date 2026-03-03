@@ -15,7 +15,7 @@ import stickerCamera from '../assets/svgs/camera.svg';
 const Footer = () => {
     return (
         // Responsive padding on the main footer element
-        <footer className="relative bg-[#F3EEE7] p-4 sm:p-6 md:p-8 h-screen">
+        <footer data-navbar-theme="light" className="relative bg-[#F3EEE7] p-4 sm:p-6 md:p-8 h-screen">
             <div className="relative bg-[#4169E1] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
 
                 {/* --- Content Columns --- */}

@@ -4,7 +4,7 @@ import HeroText from '../components/HeroText'
 
 export default function Hero() {
   return (
-    <div className="h-screen w-full lg:p-4 flex justify-center items-center">
+    <div data-navbar-theme="dark" className="h-screen w-full lg:p-4 flex justify-center items-center">
       <div className="relative h-full w-full">
         <video
           src={video}

@@ -17,6 +17,7 @@ const Carousel_002 = ({
     loop = true,
     autoplay = false,
     spaceBetween = 40,
+    ...rest
 }) => {
     const css = `
   .Carousal_002 {
@@ -33,6 +34,7 @@ const Carousel_002 = ({
                 delay: 0.5,
             }}
             className={`relative w-full max-w-4xl ${className}`}
+            {...rest}
         >
             <style>{css}</style>
 
@@ -47,7 +49,7 @@ const Carousel_002 = ({
                         : false
                 }
                 effect="cards"
-                grabCursor={true}
+                grabCursor={false}
                 loop={loop}
                 pagination={
                     showPagination

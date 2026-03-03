@@ -109,7 +109,7 @@ const TextAnimation = () => {
     return (
         // THE FIX: Added h-screen and overflow-hidden to create a stable container for GSAP to pin.
         <div ref={main} className="w-full overflow-hidden">
-            <section className="relative justify-center h-screen w-full flex flex-col p-6">
+            <section data-navbar-theme="light" className="relative justify-center h-screen w-full flex flex-col p-6">
 
                 <div className="flex items-center">
                     <div ref={wordContainerRef} className="whitespace-nowrap flex gap-4 items-end">

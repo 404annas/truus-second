@@ -169,7 +169,7 @@ const Callus = () => {
 
 
     return (
-        <section className='pt-16 bg-[#F3EEE7]'>
+        <section data-navbar-theme="light" className='pt-16 bg-[#F3EEE7]'>
             <h1 className='flex  lg:gap-5 justify-center text-center font-extrabold epilogue text-4xl lg:text-7xl tracking-[-0.06em]'>
                 call us if you
                 <p className='lora font-light'>
