@@ -184,23 +184,31 @@ const WorkCards = ({
       className="relative  w-full bg-black text-white overflow-hidden px-4 md:px-8 pb-10"
     >
       {doodleSrc ? (
-        <img
+        <motion.img
           src={doodleSrc}
           alt=""
           className={
             doodleClassName ||
             "absolute left-35 bottom-0 w-40 md:w-70 pointer-events-none"
           }
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
         />
       ) : null}
       <div className="max-w-7xl mx-auto pt-10">
         {title ? (
           <>
             {" "}
-            <img
+            <motion.img
               src={arrowDown}
               alt=""
               className="mx-auto mt-2 w-10 md:w-40 pb-5 translate-x-30 rotate-20"
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 1.8,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
             />
             <h1 className="text-3xl text-center epilogue font-extrabold">
               {title}
