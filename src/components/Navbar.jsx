@@ -28,6 +28,7 @@ const Navbar = () => {
   const [hover, setHover] = useState(false);
   const [whatsappHover, setWhatsappHover] = useState(false);
   const [navTheme, setNavTheme] = useState("dark");
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isDesktop, setIsDesktop] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth >= 1280 : true,
   );
@@ -90,6 +91,13 @@ const Navbar = () => {
       window.removeEventListener("resize", updateNavTheme);
     };
   }, [pathname, updateNavTheme]);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const baseTextColor = navTheme === "dark" ? "text-white" : "text-black";
 
@@ -166,7 +174,9 @@ const Navbar = () => {
 
           <Link to="/">
             <img
-              className={`w-40 md:w-60 h-full ${navTheme === "dark" ? "logo-on-dark" : "logo-on-light"}`}
+              className={`h-full transition-all duration-300 ease-in-out ${
+                isScrolled ? "w-28 md:w-44" : "w-40 md:w-60"
+              } ${navTheme === "dark" ? "logo-on-dark" : "logo-on-light"}`}
               src="/synclogo2.svg"
               alt="Truus"
             />

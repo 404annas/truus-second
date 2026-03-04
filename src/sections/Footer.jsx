@@ -23,32 +23,28 @@ const Footer = () => {
         {/* --- Content Columns --- */}
         {/* Responsive grid gap and top margin */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-20">
-          {/* Column 1: Jobs */}
+          {/* Column 1: Services */}
           <div className="space-y-3">
             <div className="bg-white/90 text-black text-sm font-semibold px-4 py-1.5 rounded-full w-fit">
-              looking for a job?
+              services
             </div>
             {/* Responsive font size */}
             <h3 className="text-2xl md:text-3xl font-extrabold">
-              experienced camera/edit
+              music marketing <br />
+              campaign strategy
             </h3>
           </div>
 
-          {/* Column 2: Office */}
+          {/* Column 2: Studio */}
           <div className="space-y-3">
             <div className="bg-white/90 text-black text-sm font-semibold px-4 py-1.5 rounded-full w-fit">
-              office
+              studio
             </div>
             {/* Responsive font size */}
             <h3 className="text-2xl md:text-3xl font-extrabold">
-              papaverhof 21 <br /> 1032 LX amsterdam
+              live shows <br /> brand activations
             </h3>
-            <a
-              href="#"
-              className="inline-block text-lg underline underline-offset-4 decoration-2"
-            >
-              Google Maps
-            </a>
+            <p className="text-lg">touring, PR &amp; digital rollout</p>
           </div>
 
           {/* Column 3: Contact */}
@@ -58,13 +54,13 @@ const Footer = () => {
             </div>
             {/* Responsive font size */}
             <h3 className="text-2xl md:text-3xl font-extrabold">
-              hello@truus.co <br />
+              hello@sync.co <br />
               <a href="#" className="underline underline-offset-4">
-                send us a whatsapp*
+                book an artist
               </a>
             </h3>
             <p className="text-xs text-white/70">
-              *we're millennials and gen-z; please do not call us.
+              we respond fast for tours, campaigns, and launches.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a href="#" aria-label="LinkedIn">
@@ -128,14 +124,17 @@ const Footer = () => {
 
         {/* --- Credits Button --- */}
         {/* Responsive positioning */}
-        <div
-          title="Brian"
-          className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-black text-white text-sm font-semibold px-4 py-1.5 rounded-full z-20"
-        >
-          credits
-        </div>
       </div>
-      <h3 className="md:text-lg text-center py-5">Developed By Techxudo</h3>
+      <h3 className="md:text-lg text-center py-5">
+        Developed By{" "}
+        <a
+          href="https://techxudo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Techxudo
+        </a>
+      </h3>
     </footer>
   );
 };
