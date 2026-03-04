@@ -4,7 +4,7 @@ import gsap from 'gsap';
 
 import WorkDropdown from './WorkDropdown';
 import WhatsappPopup from './WhatsappPopup';
-// import truusLogo from '../assets/truus-logo.svg'; // Add your logo here
+// import syncLogo from '../assets/sync-logo.svg'; // Add your logo here
 
 const Header = () => {
     const [isWorkOpen, setIsWorkOpen] = useState(false);
@@ -71,8 +71,8 @@ const Header = () => {
 
                 {/* Center Logo */}
                 <div className="font-serif text-3xl font-medium">
-                    {/* <img src={truusLogo} alt="Truus Logo" className="h-8" /> */}
-                    truus
+                    {/* <img src={syncLogo} alt="Sync Logo" className="h-8" /> */}
+                    sync
                 </div>
 
                 {/* WhatsApp Icon and Popup */}

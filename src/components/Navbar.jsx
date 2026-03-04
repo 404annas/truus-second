@@ -178,7 +178,7 @@ const Navbar = () => {
                 isScrolled ? "w-28 md:w-44" : "w-40 md:w-60"
               } ${navTheme === "dark" ? "logo-on-dark" : "logo-on-light"}`}
               src="/synclogo2.svg"
-              alt="Truus"
+              alt="Sync"
             />
           </Link>
 

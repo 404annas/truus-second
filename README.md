@@ -1,12 +1,12 @@
 
-# ⚡ Truus — Creative Agency Experience
+# ⚡ Sync — Creative Agency Experience
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-> A high-end, immersive creative agency website clone of [Truus](https://truus.amsterdam/), originally designed by Jordan Gilroy and developed by Dennis Snellenberg. This project focuses on high-performance animations, seamless transitions, and award-winning user experience.
+> A high-end, immersive creative agency website clone of [Sync](https://sync.amsterdam/), originally designed by Jordan Gilroy and developed by Dennis Snellenberg. This project focuses on high-performance animations, seamless transitions, and award-winning user experience.
 
 ---
 
@@ -47,7 +47,7 @@ Ensures that GSAP's `ScrollTrigger` stays perfectly in sync with the user's inpu
 The project follows a modular and clean architecture optimized for Next.js:
 
 ```text
-truus/
+sync/
 ├── public/                 # Static assets (images, videos, SVGs)
 ├── src/
 │   ├── app/                # Next.js App Router (Layouts & Pages)
@@ -73,7 +73,7 @@ truus/
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/Ahsans-code/truus.git
+   git clone https://github.com/Ahsans-code/sync.git
    ```
 2. **Install dependencies:**
    ```bash
