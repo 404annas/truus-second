@@ -6,12 +6,10 @@ import Projects from "../sections/Projects";
 import Callus from "../sections/Callus";
 import ClientsMarquee from "../sections/ClientMarquee";
 import TeamSection from "../sections/TeamSection";
-import Preloader from "../components/PreLoader";
 
 export default function Home() {
   return (
     <div>
-      <Preloader />
       <Hero />
       <TextAnimation />
       <Agency />
