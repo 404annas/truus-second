@@ -102,7 +102,7 @@ const Navbar = () => {
   const baseTextColor = navTheme === "dark" ? "text-white" : "text-black";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-8 -mt-20">
+    <header className="fixed top-0 left-0 right-0 z-50 pt-6 -mt-20">
       <div className="w-full max-w-6xl mx-auto px-8 xl:px-0">
         <div className="flex justify-between items-center">
           <div

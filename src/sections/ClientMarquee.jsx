@@ -71,7 +71,7 @@ const ClientsMarquee = () => {
     }, []);
 
     return (
-        <section data-navbar-theme="light" className="relative w-full px-10 lg:pr-10 min-h-screen bg-[#D7DFE9] flex items-center overflow-hidden">
+        <section data-navbar-theme="light" className="relative w-full px-10 lg:pr-10 min-h-screen bg-gradient-to-b from-[#2F214F] to-[#D7DFE9] flex items-center overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center w-full ">
 
                 {/* --- Left Static Section --- */}

@@ -19,7 +19,7 @@ const Footer = () => {
       data-navbar-theme="light"
       className="relative bg-[#D7DFE9] p-4 sm:p-6 md:p-8 h-screen"
     >
-      <div className="relative bg-[#2F214F] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
+      <div className="relative bg-gradient-to-b from-[#2F214F] via-[#2F214F] to-[#D7DFE9] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
         {/* --- Content Columns --- */}
         {/* Responsive grid gap and top margin */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-20">
