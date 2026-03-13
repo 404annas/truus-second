@@ -11,9 +11,12 @@ import arrowDoodle from "../assets/svgs/arrow-d.svg";
 import curlyDoodle from "../assets/svgs/curly-d.svg";
 import arrowDown from "../assets/svgs/arrow-d.svg";
 
+import event1 from "../assets/images/event1.jpeg"
+import event2 from "../assets/images/event2.jpeg"
+
 const defaultCards = [
   {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68663be0740c68b890d87ff6_kfc-kipsalon-thumbnail.avif",
+    src: event1,
     brand: "douwe egberts",
     tag: "social",
     title: "feestje bouwe?",
@@ -22,7 +25,7 @@ const defaultCards = [
     z: "z-20",
   },
   {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
+    src: event2,
     brand: "hema",
     tag: "360",
     title: "skibidi school",

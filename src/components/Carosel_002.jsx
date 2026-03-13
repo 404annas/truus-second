@@ -90,7 +90,7 @@ const Carousel_002 = ({
                                 />
                                 {image.title && (
                                     <motion.p
-                                        className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-2xl  "
+                                        className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-black font-extrabold epilogue text-2xl  "
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{
                                             opacity: isActive ? 1 : 0,
@@ -105,7 +105,7 @@ const Carousel_002 = ({
                                     image.sticker1 && (
                                         <motion.img
                                             src={image.sticker1}
-                                            className="absolute w-28 bottom-28 -left-10 text-center text-white font-extrabold epilogue text-2xl  "
+                                            className="absolute w-28 bottom-28 -left-10 text-center text-black font-extrabold epilogue text-2xl  "
                                             initial={{ opacity: 0, scale: 0.5 }}
                                             animate={{
                                                 opacity: isActive ? 1 : 0,
@@ -137,10 +137,10 @@ const Carousel_002 = ({
                 {showNavigation && (
                     <div>
                         <div className="swiper-button-next after:hidden">
-                            <ChevronRightIcon className="h-6 w-6 text-white" />
+                            <ChevronRightIcon className="h-6 w-6 text-black" />
                         </div>
                         <div className="swiper-button-prev after:hidden">
-                            <ChevronLeftIcon className="h-6 w-6 text-white" />
+                            <ChevronLeftIcon className="h-6 w-6 text-black" />
                         </div>
                     </div>
                 )}

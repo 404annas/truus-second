@@ -128,7 +128,7 @@ const TextAnimation = () => {
                         </h1>
 
                         <div className='translate-y-8 md:translate-y-12'>
-                            <ArrowDown className={"w-24 md:w-32"} color="#000" />
+                            <ArrowDown className={"w-24 md:w-32"} color="#ffffff" />
                         </div>
                     </div>
                 </div>

@@ -18,6 +18,9 @@ import AnimatedSvgPath from '../SvgComponents/AnimatedSvgPath';
 import { Carousel_002 } from '../components/Carosel_002';
 import Twolines from '../SvgComponents/Twolines';
 
+import event1 from "../assets/images/event1.jpeg"
+import event2 from "../assets/images/event2.jpeg"
+
 const Projects = () => {
     const cursorRef = useRef(null);
     const [cursorVisible, setCursorVisible] = useState(false);
@@ -44,7 +47,7 @@ const Projects = () => {
 
     const images = [
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668b10ee9a57f9367edf77_Ferry.avif",
+            src: event1,
             alt: "Project image 1",
             title: "Ferry",
             subtitle: "netflix",
@@ -52,7 +55,7 @@ const Projects = () => {
             sticker2: "👍🏻 social"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68663be0740c68b890d87ff6_kfc-kipsalon-thumbnail.avif",
+            src: event2,
             alt: "Project image 2",
             title: "KFC",
             subtitle: "kipsalon",
@@ -161,11 +164,11 @@ const Projects = () => {
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}
-                    className='text-center text-white epilogue text-lg md:text-xl '
+                    className='text-center text-black epilogue text-lg md:text-xl '
                 >
                     View Events
                 </Link>
-                <Twolines className={"w-24"} color={"white"} />
+                <Twolines className={"w-24"} color={"black"} />
             </div>
         </section>
     );
