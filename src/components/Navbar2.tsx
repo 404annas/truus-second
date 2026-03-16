@@ -106,7 +106,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-1/2 h-full bg-[#035391] flex flex-col justify-center pl-[4%] sm:pl-[8%] lg:pl-[10%] pt-20"
+              className="w-1/2 h-full bg-[#015696] flex flex-col justify-center pl-[4%] sm:pl-[8%] lg:pl-[10%] pt-20"
             >
               <nav className="flex flex-col mb-6">
                 {menuLinks.map((link, idx) => (
@@ -142,7 +142,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-1/2 h-full bg-[#035391] flex flex-col justify-center items-center px-8 pl-[12%] pt-10"
+              className="w-1/2 h-full bg-[#015696] flex flex-col justify-center items-center px-8 pl-[12%] pt-10"
             >
               <img loading="lazy" src={qrImage} alt="QR Image"/>
               <h2 className="epilogue font-black text-[30px] md:text-[40px] lg:text-[55px] leading-[0.5] text-white text-center uppercase sm:pt-4 pt-4">

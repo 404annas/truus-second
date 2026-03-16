@@ -156,7 +156,7 @@ const TeamSection = () => {
   return (
     <section
       data-navbar-theme="dark"
-      className="relative overflow-x-hidden bg-gradient-to-b from-[#047fdd] to-[#002744] text-white w-full  pt-10 px-8 flex flex-col items-center"
+      className="relative overflow-x-hidden bg-gradient-to-b from-[#015696] to-[#002744] text-white w-full  pt-10 px-8 flex flex-col items-center"
     >
       {/* --- Heading --- */}
       <div className="w-full max-w-5xl  text-center mb-24">

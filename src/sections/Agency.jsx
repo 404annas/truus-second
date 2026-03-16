@@ -6,7 +6,7 @@ import ZigzagLine from '../SvgComponents/ZigzagLine'
 
 export default function Agency() {
     return (
-        <div data-navbar-theme="light" className='relative flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#047fdd] to-[#047fdd]'>
+        <div data-navbar-theme="light" className='relative flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#015696] to-[#015696]'>
             <h1 className='max-w-7xl md:max-w-3xl mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-[900] text-black epilogue pb-6 sm:pb-8 lg:pb-10 leading-tight'>
                 From planning to execution
                 <br className='hidden sm:block' />
