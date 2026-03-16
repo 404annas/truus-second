@@ -11,10 +11,10 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden bg-[#0B0C10]">
       
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#8BA0C7] via-[#3F3C7B] to-[#0B0C10] z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#b48cd9] via-[#3F3C7B] to-[#0B0C10] z-0" />
 
       {/* 2. TEXT CONTENT: Positioned clearly in the "sky" area, below the logo */}
-      <div className="absolute inset-0 z-50 flex flex-col items-center justify-start pt-[22vh] px-6">
+      <div className="absolute inset-0 z-50 flex flex-col items-center justify-start pt-[23vh] px-6">
         <div className="w-full max-w-6xl text-center">
           <HeroText />
         </div>

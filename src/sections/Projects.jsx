@@ -131,7 +131,7 @@ const Projects = () => {
     return (
         <section
             data-navbar-theme="dark"
-            className="relative w-full bg-gradient-to-t from-[#D7DFE9] to-[#D7DFE9] text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen"
+            className="relative w-full bg-gradient-to-t from-[#b48cd9] to-[#b48cd9] text-white overflow-hidden flex flex-col justify-center p-6 md:p-8 min-h-screen"
             onMouseMove={handleCursorMove}
             onMouseLeave={() => {
                 cursorActiveRef.current = false;

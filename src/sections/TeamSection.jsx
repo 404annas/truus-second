@@ -156,7 +156,7 @@ const TeamSection = () => {
   return (
     <section
       data-navbar-theme="dark"
-      className="relative overflow-x-hidden bg-gradient-to-b from-[#D7DFE9] to-[#2F214F] text-white w-full  pt-10 px-8 flex flex-col items-center"
+      className="relative overflow-x-hidden bg-gradient-to-b from-[#b48cd9] to-[#1b0f36] text-white w-full  pt-10 px-8 flex flex-col items-center"
     >
       {/* --- Heading --- */}
       <div className="w-full max-w-5xl  text-center mb-24">
@@ -173,7 +173,7 @@ const TeamSection = () => {
                 },
               ]}
               viewBox={"0 0 201 86"}
-              color={"#2F214F"}
+              color={"1b0f36"}
             />
           </span>
           , from rising stars to headline performers.{" "}

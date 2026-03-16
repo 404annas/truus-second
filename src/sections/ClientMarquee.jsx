@@ -71,7 +71,7 @@ const ClientsMarquee = () => {
     }, []);
 
     return (
-        <section data-navbar-theme="light" className="relative w-full px-10 lg:pr-10 min-h-screen bg-gradient-to-b from-[#2F214F] to-[#D7DFE9] flex items-center overflow-hidden">
+        <section data-navbar-theme="light" className="relative w-full px-10 lg:pr-10 min-h-screen bg-gradient-to-b from-[#1b0f36] to-[#b48cd9] flex items-center overflow-hidden">
             <div className="flex flex-col lg:flex-row justify-between items-center w-full ">
 
                 {/* --- Left Static Section --- */}
@@ -98,7 +98,7 @@ const ClientsMarquee = () => {
 
                 {/* --- Right Marquee Section --- */}
                 <div className="relative  h-[500px] flex gap-4 md:gap-6 overflow-hidden mask-image-gradient max-lg:hidden ">
-                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#D7DFE9] to-transparent z-10'></div>
+                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#b48cd9] to-transparent z-10'></div>
                     {/* Column 1 (Scrolling Up) */}
                     <div className=" flex flex-col gap-3  animate-[marquee-up_5s_linear_infinite]">
                         {duplicatedCol1.map((item, index) => (
@@ -117,7 +117,7 @@ const ClientsMarquee = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#D7DFE9] to-transparent z-10'></div>
+                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#b48cd9] to-transparent z-10'></div>
 
                 </div>
                 {!isDesktop &&

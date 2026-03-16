@@ -108,12 +108,12 @@ const TextAnimation = () => {
 
     return (
         // THE FIX: Added h-screen and overflow-hidden to create a stable container for GSAP to pin.
-        <div ref={main} className="w-full overflow-hidden bg-gradient-to-b from-[#2F214F] to-[#98A5CD]">
-            <section data-navbar-theme="dark" className="relative justify-center h-screen w-full flex flex-col p-6">
+        <div className="w-full overflow-hidden bg-gradient-to-b from-[#1b0f36] to-[#b48cd9]">
+            <section data-navbar-theme="dark" className="relative justify-center items-center h-screen w-full flex flex-col p-6">
 
                 <div className="flex items-center">
-                    <div ref={wordContainerRef} className="whitespace-nowrap flex gap-4 items-end">
-                        <h1  className="text-5xl sm:text-6xl lg:text-9xl font-extrabold text-white epilogue relative">
+                    <div className="whitespace-nowrap flex gap-4 items-end">
+                        <h1  className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white epilogue relative">
                             Making Every Event Special.
 
                             <img
@@ -127,13 +127,13 @@ const TextAnimation = () => {
                             <img className='phone absolute left-[90%] w-12 h-12 md:w-20 md:h-20 -top-2 md:-top-5' src={phone} alt="" />
                         </h1>
 
-                        <div className='translate-y-8 md:translate-y-12'>
+                        {/* <div className='translate-y-8 md:translate-y-12'>
                             <ArrowDown className={"w-24 md:w-32"} color="#FFFFFF" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
-                <p className="max-w-lg text-base md:text-xl mx-auto text-center text-white z-10 mt-16 md:mt-24 dm-sans">
+                <p className="max-w-lg text-base md:text-xl mx-auto text-center text-white z-10 mt-20 man">
                     We represent exceptional artists and produce unforgettable events across music, corporate, cultural, and private platforms.
                 </p>
             </section>
