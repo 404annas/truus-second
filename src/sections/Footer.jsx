@@ -73,7 +73,7 @@ const Footer = () => {
                 <FaTiktok size={28} />
               </a>
               <p className="text-right pl-6 text-xs man">
-                Powered By{" "}
+                Developed By{" "}
                 <a className="font-semibold" href="https://techxudo.com/" target="_blank">
                   Techxudo
                 </a>

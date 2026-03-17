@@ -9,13 +9,15 @@ import collage3 from "../assets/images/collage3.avif";
 import collage4 from "../assets/images/collage4.avif";
 import blueDoodle from "../assets/svgs/blue-doodle3.svg";
 
+import plan1 from "../assets/images/plan1.png"
+
 // Register the GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
 // --- Component Data (Easy to update later) ---
 const imageData = [
   {
-    src: "/images1.jpg",
+    src: plan1,
     alt: "People at a table",
     tag: "Fun at the concert",
     tagColor: "bg-pink-300",
@@ -23,7 +25,7 @@ const imageData = [
     rotation: -6, // degrees
   },
   {
-    src: "/images4.jpg",
+    src: plan1,
     alt: "Man in a wizard hat",
     tag: "mainstream is not a dirty word",
     tagColor: "bg-orange-500",
@@ -31,7 +33,7 @@ const imageData = [
     rotation: 3, // degrees
   },
   {
-    src: "/images3.jpg",
+    src: plan1,
     alt: "Man relaxing",
     tag: "Events are not a dirty word",
     tagColor: "bg-orange-500",
@@ -39,7 +41,7 @@ const imageData = [
     rotation: -6, // degrees
   },
   {
-    src: "/images4.jpg",
+    src: plan1,
     alt: "Group at an event",
     tag: "arrogance = old fashioned",
     tagColor: "bg-lime-300",
@@ -174,7 +176,7 @@ const ImageCollage = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full  "
+                className="w-full h-88 object-cover  "
               />
 
               {image.tag && (
