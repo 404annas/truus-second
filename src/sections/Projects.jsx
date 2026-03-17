@@ -21,6 +21,8 @@ import Twolines from '../SvgComponents/Twolines';
 import event1 from "../assets/images/event1.jpeg"
 import event2 from "../assets/images/event2.jpeg"
 
+import video1 from "../assets/videos/video1.mp4"
+
 const Projects = () => {
     const cursorRef = useRef(null);
     const [cursorVisible, setCursorVisible] = useState(false);
@@ -47,20 +49,18 @@ const Projects = () => {
 
     const images = [
         {
+            type: "video",
+            title: "Sync Events",
+            src: video1,
+            alt: "Project video 1",
+        },
+        {
             src: event1,
             alt: "Project image 1",
             title: "Port Grand - HAVI",
             subtitle: "netflix",
             sticker1: stickerGoodVibes,
             sticker2: "👍🏻 social"
-        },
-        {
-            src: event2,
-            alt: "Project image 2",
-            title: "Fam Fest - AFUSIC",
-            subtitle: "kipsalon",
-            sticker1: stickerHi,
-            sticker2: "✨ 360"
         },
         {
             src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
@@ -124,6 +124,14 @@ const Projects = () => {
             title: "Hema",
             subtitle: "socials",
             sticker1: stickerLetsGo,
+            sticker2: "✨ 360"
+        },
+        {
+            src: event2,
+            alt: "Project image 2",
+            title: "Fam Fest - AFUSIC",
+            subtitle: "kipsalon",
+            sticker1: stickerHi,
             sticker2: "✨ 360"
         },
     ];

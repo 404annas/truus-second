@@ -83,11 +83,24 @@ const Carousel_002 = ({
                     <SwiperSlide key={index} className="swiper-stack rounded-3xl relative border-4 border-white bg-white " >
                         {({ isActive }) => (
                             <>
-                                <img
-                                    className="h-full w-full object-cover rounded-3xl"
-                                    src={image.src}
-                                    alt={image.alt}
-                                />
+                                {image.type === "video" ? (
+                                    <video
+                                        className="h-full w-full object-cover rounded-3xl"
+                                        src={image.src}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        preload="metadata"
+                                        aria-label={image.alt}
+                                    />
+                                ) : (
+                                    <img
+                                        className="h-full w-full object-cover rounded-3xl"
+                                        src={image.src}
+                                        alt={image.alt}
+                                    />
+                                )}
                                 {image.title && (
                                     <motion.p
                                         className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-2xl  "

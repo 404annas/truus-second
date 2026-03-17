@@ -20,8 +20,8 @@ import CurveLine from "../SvgComponents/CurveLine";
 import ArrowDown from "../SvgComponents/ArrowDown";
 import RoundedArrow from "../SvgComponents/RoundedArrow";
 import Popup from "../SvgComponents/Popup";
-import blob2 from "../assets/svgs/blob3.svg";
-import greenBlob from "../assets/svgs/greenblob2.svg";
+import blob2 from "../assets/svgs/blob4.svg";
+import greenBlob from "../assets/svgs/cloud3.svg";
 
 const singerImages = [
   "/singer/ali-zafar.webp",

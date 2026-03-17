@@ -12,7 +12,7 @@ import React, { useEffect, useState } from 'react';
 // import logoSwapfiets from '../assets/logos/swapfiets.png';
 // import logoGetir from '../assets/logos/getir.png';
 // import logoAceTate from '../assets/logos/ace-tate.png';
-import cloud from "../assets/svgs/cloud2.svg"
+import cloud from "../assets/svgs/cloud3.svg"
 import bts from "../assets/svgs/bts.svg"
 import roundarrow from "../assets/svgs/roundarrow.svg"
 import RoundedArrow from '../SvgComponents/RoundedArrow';
@@ -98,7 +98,7 @@ const ClientsMarquee = () => {
 
                 {/* --- Right Marquee Section --- */}
                 <div className="relative  h-[500px] flex gap-4 md:gap-6 overflow-hidden mask-image-gradient max-lg:hidden ">
-                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#b48cd9] to-transparent z-10'></div>
+                    <div className='absolute top-0 h-24 w-full bg-gradient-to-b from-[#015696] to-transparent z-10'></div>
                     {/* Column 1 (Scrolling Up) */}
                     <div className=" flex flex-col gap-3  animate-[marquee-up_5s_linear_infinite]">
                         {duplicatedCol1.map((item, index) => (
@@ -117,7 +117,7 @@ const ClientsMarquee = () => {
                             </div>
                         ))}
                     </div>
-                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#b48cd9] to-transparent z-10'></div>
+                    <div className='absolute bottom-0 h-24 w-full bg-gradient-to-t from-[#00192b] to-transparent z-10'></div>
 
                 </div>
                 {!isDesktop &&

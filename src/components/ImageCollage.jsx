@@ -7,7 +7,7 @@ import collage1 from "../assets/images/collage1.avif";
 import collage2 from "../assets/images/collage2.avif";
 import collage3 from "../assets/images/collage3.avif";
 import collage4 from "../assets/images/collage4.avif";
-import blueDoodle from "../assets/svgs/blue-doodle2.svg";
+import blueDoodle from "../assets/svgs/blue-doodle3.svg";
 
 // Register the GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
