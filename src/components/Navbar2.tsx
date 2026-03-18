@@ -69,7 +69,7 @@ const Navbar = () => {
     { name: "Events", id: "events", active: false, to: "/work" },
     { name: "Services", id: "services", active: false },
     { name: "Artists", id: "artists", active: false },
-    { name: "Book Now", id: "works", active: false },
+    { name: "Book Now", id: "contact", active: false },
     // { name: "Contact", id: "contact", active: false },
   ];
 

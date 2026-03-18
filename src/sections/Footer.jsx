@@ -34,7 +34,7 @@ const Footer = () => {
     // Responsive padding on the main footer element
     <footer
       data-navbar-theme="light"
-      className="relative bg-[#00192b] p-4 sm:p-6 md:p-8 h-screen"
+      className="relative bg-[#015696] p-4 sm:p-6 md:p-8 h-screen"
     >
       <div className="relative bg-gradient-to-b from-[#002744] via-[#002744] to-[#015696] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
         {/* --- Content Columns --- */}

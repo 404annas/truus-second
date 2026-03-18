@@ -7,6 +7,7 @@ import Callus from "../sections/Callus";
 import ClientsMarquee from "../sections/ClientMarquee";
 import TeamSection from "../sections/TeamSection";
 import Hero2 from "../sections/Hero2";
+import ContactForm from "../sections/ContactForm";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Callus />
       <TeamSection />
       <ClientsMarquee />
+      <ContactForm />
     </div>
   );
 }
