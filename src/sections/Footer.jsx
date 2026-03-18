@@ -80,11 +80,11 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={() =>
-                  openGmailCompose("hm.osamakhan@thesyncevents.com")
+                  openGmailCompose("m.osamakhan@thesyncevents.com")
                 }
                 className="underline underline-offset-4"
               >
-                hm.osamakhan@thesyncevents.com
+                m.osamakhan@thesyncevents.com
               </button>
               <br />
               <button

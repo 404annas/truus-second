@@ -10,7 +10,7 @@ import {
   FaTiktok,
   FaPinterestP,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import qrImage from "../assets/images/qr.avif";
 // import Image from "next/image";
 
@@ -20,6 +20,7 @@ import qrImage from "../assets/images/qr.avif";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSocialOpen, setIsSocialOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -65,18 +66,26 @@ const Navbar = () => {
   const menuLinks = [
     { name: "Home", id: "home", active: false },
     { name: "About", id: "about", active: true },
-    { name: "Projects", id: "projects", active: false },
+    { name: "Events", id: "events", active: false, to: "/work" },
     { name: "Services", id: "services", active: false },
     { name: "Artists", id: "artists", active: false },
-    { name: "Works", id: "works", active: false },
+    { name: "Book Now", id: "works", active: false },
     // { name: "Contact", id: "contact", active: false },
   ];
 
   const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     sectionId: string,
+    to?: string,
   ) => {
     event.preventDefault();
+    if (to) {
+      navigate(to);
+      window.scrollTo(0, 0);
+      setIsOpen(false);
+      return;
+    }
+
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -87,13 +96,13 @@ const Navbar = () => {
   return (
     <>
       {/* HEADER LOGO & MENU BUTTON */}
-      <div className="absolute left-0 top-0 z-[100] w-full bg-transparent pointer-events-none -mt-8 lg:-mt-16 pl-4">
+      <div className="absolute left-0 top-0 z-[100] w-full bg-transparent pointer-events-none -mt-8 lg:-mt-10 pl-4">
         <div className="flex items-center justify-between pointer-events-auto mt-5">
           <div>
             <Link to={"/"}>
               <img
               loading="lazy"
-                className="w-30 sm:w-50 h-full -translate-y-4"
+                className="w-30 sm:w-40 h-full -translate-y-4"
                 src="/synclogo2.svg"
                 alt="Sync Logo"
               />
@@ -132,8 +141,8 @@ const Navbar = () => {
                 {menuLinks.map((link, idx) => (
                   <a
                     key={idx}
-                    href={`#${link.id}`}
-                    onClick={(event) => handleNavClick(event, link.id)}
+                    href={link.to ?? `#${link.id}`}
+                    onClick={(event) => handleNavClick(event, link.id, link.to)}
                     className={`epilogue font-black text-[25px] sm:text-[4rem] lg:text-[3.5rem] leading-[0.5] uppercase transition-colors duration-300 hover:text-[#015494] ${
                       link.active ? "text-[#015494]" : "text-white"
                     }`}

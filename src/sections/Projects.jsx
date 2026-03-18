@@ -165,7 +165,7 @@ const Projects = () => {
         >
             <div className="relative flex-1 flex justify-center items-center mt-10 project-cursor-zone">
                 <div ref={cursorRef} className={`project-cursor ${cursorVisible ? 'is-visible' : ''}`}>
-                    <span className="project-cursor__pill">drag</span>
+                    <span className="project-cursor__pill man bg-[#015696] text-white">drag</span>
                     <img className="project-cursor__icon" src="/cursor.svg" alt="" aria-hidden="true" />
                 </div>
                 <AnimatedSvgPath
