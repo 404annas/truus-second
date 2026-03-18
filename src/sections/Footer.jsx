@@ -47,8 +47,12 @@ const Footer = () => {
             </div>
             {/* Responsive font size */}
             <h3 className="text-lg md:text-xl font-extrabold man">
-              music marketing <br />
-              campaign strategy
+              music production <br />
+              recording studio <br />
+              mixing & mastering <br />
+              music distribution <br />
+              artist development <br />
+              post production
             </h3>
           </div>
 
