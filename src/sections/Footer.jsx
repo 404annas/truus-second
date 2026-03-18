@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="relative bg-gradient-to-b from-[#002744] via-[#002744] to-[#015696] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
         {/* --- Content Columns --- */}
         {/* Responsive grid gap and top margin */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-6">
           {/* Column 1: Services */}
           <div className="space-y-3">
             <div className="bg-white/90 text-black text-sm font-semibold px-4 py-1.5 rounded-full w-fit">

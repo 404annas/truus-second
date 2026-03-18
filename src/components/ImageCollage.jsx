@@ -46,7 +46,7 @@ const imageData = [
   {
     src: plan4,
     alt: "Group at an event",
-    tag: "Artist Campaign Execution",
+    tag: "Concert Production Experts",
     tagColor: "bg-lime-300",
     position: "absolute top-[40%] md:top-[20%] left-1/2 md:left-[65%] z-40",
     rotation: 3, // degrees
