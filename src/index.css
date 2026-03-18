@@ -30,6 +30,10 @@ body{
       cursor: url("./assets/svgs/cursor-default.svg") 2 0, auto;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 input[type="text"],
 textarea,
 p,h1,h2,h3,h4

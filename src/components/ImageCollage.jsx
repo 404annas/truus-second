@@ -11,6 +11,8 @@ import blueDoodle from "../assets/svgs/blue-doodle3.svg";
 
 import plan1 from "../assets/images/plan1.png"
 import plan2 from "../assets/images/plan2.png"
+import plan3 from "../assets/images/plan3.avif"
+import plan4 from "../assets/images/plan4.avif"
 
 // Register the GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -20,7 +22,7 @@ const imageData = [
   {
     src: plan1,
     alt: "People at a table",
-    tag: "Fun at the concert",
+    tag: "Live Event Experiences",
     tagColor: "bg-pink-300",
     position: "absolute top-[10%] left-0 z-10",
     rotation: -6, // degrees
@@ -28,23 +30,23 @@ const imageData = [
   {
     src: plan2,
     alt: "Man in a wizard hat",
-    tag: "mainstream is not a dirty word",
+    tag: "Music Marketing Strategy",
     tagColor: "bg-orange-500",
     position: "absolute top-[40%]  md:top-[20%] right-1/2 md:left-1/4 z-20",
     rotation: 3, // degrees
   },
   {
-    src: plan1,
+    src: plan3,
     alt: "Man relaxing",
-    tag: "Events are not a dirty word",
+    tag: "Artist Campaign Execution",
     tagColor: "bg-orange-500",
     position: "absolute top-[10%] right-0 md:right-1/4 z-30",
     rotation: -6, // degrees
   },
   {
-    src: plan1,
+    src: plan4,
     alt: "Group at an event",
-    tag: "arrogance = old fashioned",
+    tag: "Artist Campaign Execution",
     tagColor: "bg-lime-300",
     position: "absolute top-[40%] md:top-[20%] left-1/2 md:left-[65%] z-40",
     rotation: 3, // degrees

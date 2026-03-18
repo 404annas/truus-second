@@ -126,7 +126,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-1/2 h-full bg-[#015696] flex flex-col justify-center pl-[4%] sm:pl-[8%] lg:pl-[10%] pt-20"
+              className="w-1/2 h-full bg-gradient-to-r from-[#04070A] to-[#015696] flex flex-col justify-center pl-[4%] sm:pl-[8%] lg:pl-[10%] pt-20"
             >
               <nav className="flex flex-col mb-6">
                 {menuLinks.map((link, idx) => (
@@ -134,8 +134,8 @@ const Navbar = () => {
                     key={idx}
                     href={`#${link.id}`}
                     onClick={(event) => handleNavClick(event, link.id)}
-                    className={`epilogue font-black text-[30px] sm:text-[4rem] lg:text-[3.5rem] leading-[0.5] uppercase transition-colors duration-300 hover:text-[#022c4d] ${
-                      link.active ? "text-[#022c4d]" : "text-white"
+                    className={`epilogue font-black text-[30px] sm:text-[4rem] lg:text-[3.5rem] leading-[0.5] uppercase transition-colors duration-300 hover:text-[#015494] ${
+                      link.active ? "text-[#015494]" : "text-white"
                     }`}
                   >
                     {link.name}
@@ -170,7 +170,7 @@ const Navbar = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-1/2 h-full bg-[#015696] flex flex-col justify-center items-center px-8 pl-[12%] pt-10"
+              className="w-1/2 h-full bg-gradient-to-l from-[#04070A] to-[#015696] flex flex-col justify-center items-center px-8 pl-[12%] pt-10"
             >
               <img loading="lazy" src={qrImage} alt="QR Image"/>
               <h2 className="epilogue font-black text-[25px] sm:text-[30px] md:text-[40px] lg:text-[55px] leading-[0.5] text-white text-center uppercase sm:pt-4 pt-4">
@@ -181,7 +181,7 @@ const Navbar = () => {
               <p className="man font-bold sm:block hidden text-white text-center md:text-base lg:text-lg leading-snug w-full max-w-[350px] mt-6">
                 Because we prefer genuine, quick, and straightforward exchanges.
               </p>
-              <button className="mt-4 lg:mt-6 bg-[#022c4d] transition-all duration-300 text-white man font-semibold text-[10px] sm:text-sm px-4 sm:px-6 py-3 sm:py-4 rounded-lg cursor-pointer hover:scale-95">
+              <button className="mt-4 lg:mt-6 bg-[#015494] transition-all duration-300 text-white man font-semibold text-[10px] sm:text-sm px-4 sm:px-6 py-3 sm:py-4 rounded-lg cursor-pointer hover:scale-95">
                 Chat With Us
               </button>
             </motion.div>

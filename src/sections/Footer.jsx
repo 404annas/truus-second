@@ -11,6 +11,7 @@ import stickerHeart from "../assets/svgs/heart.svg";
 import stickerHands from "../assets/svgs/phone.svg";
 import sticker100 from "../assets/svgs/heart2.svg";
 import stickerCamera from "../assets/svgs/camera.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const openGmailCompose = (email) => {
@@ -54,13 +55,15 @@ const Footer = () => {
           {/* Column 2: Studio */}
           <div className="space-y-3">
             <div className="bg-white/90 text-black text-sm font-semibold px-4 py-1.5 rounded-full w-fit">
-              studio
+              pages
             </div>
             {/* Responsive font size */}
             <h3 className="text-lg md:text-xl font-extrabold man">
-              live shows <br /> brand activations
+              our artsits <br />{" "}
+              <Link to={"/work"} onClick={() => scrollTo(0, 0)}>
+                our events
+              </Link>
             </h3>
-            <p className="text-lg">touring, PR &amp; digital rollout</p>
           </div>
 
           {/* Column 3: Contact */}
@@ -72,7 +75,9 @@ const Footer = () => {
             <h3 className="text-lg md:text-xl font-extrabold man">
               <button
                 type="button"
-                onClick={() => openGmailCompose("hm.osamakhan@thesyncevents.com")}
+                onClick={() =>
+                  openGmailCompose("hm.osamakhan@thesyncevents.com")
+                }
                 className="underline underline-offset-4"
               >
                 hm.osamakhan@thesyncevents.com
@@ -86,9 +91,6 @@ const Footer = () => {
                 qasimazhar@thesyncevents.com
               </button>
               <br />
-              <a href="#" className="underline underline-offset-4">
-                book an artist
-              </a>
             </h3>
             <p className="text-xs text-white/70">
               we respond fast for tours, campaigns, and launches.
@@ -97,12 +99,20 @@ const Footer = () => {
               <a href="#" aria-label="Whatsapp">
                 <FaWhatsapp size={28} />
               </a>
-              <a href="https://www.instagram.com/thesyncevents" target="_blank" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/thesyncevents"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <FaInstagram size={28} />
               </a>
               <p className="text-right pl-6 text-xs man">
                 Developed By{" "}
-                <a className="font-semibold" href="https://techxudo.com/" target="_blank">
+                <a
+                  className="font-semibold"
+                  href="https://techxudo.com/"
+                  target="_blank"
+                >
                   Techxudo
                 </a>
               </p>
