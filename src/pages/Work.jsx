@@ -2,12 +2,34 @@ import React from "react";
 import WorkCards from "../components/WorkCards";
 import arrowDoodle from "../assets/svgs/arrow-d.svg";
 
-import event1 from "../assets/images/event1.jpeg"
-import event2 from "../assets/images/event2.jpeg"
+import event1 from "../assets/images/event1.jpeg";
+import event2 from "../assets/images/event2.jpeg";
+import event3 from "../assets/images/poster.jpeg";
+import event5 from "../assets/images/event5.jpg";
+import event4 from "../assets/images/event4.jpg";
+import event6 from "../assets/images/event6.jpg";
+
+import video1 from "../assets/videos/video1.mp4";
+import video2 from "../assets/videos/video2.MP4";
+import video3 from "../assets/videos/video3.MP4";
+import video4 from "../assets/videos/video4.mp4";
 
 const featuredCards = [
   {
-    src: event1,
+    type: "video",
+    src: video1,
+    brand: "Events",
+    tag: "social",
+    title: "Sync Events",
+    rotation: 3,
+    position: "lg:-translate-y-3",
+    z: "z-20",
+  },
+  {
+    type: "video",
+    src: video3,
+    poster: event1,
+    hoverPlay: true,
     brand: "Port Grand",
     tag: "social",
     title: "HAVI",
@@ -16,7 +38,10 @@ const featuredCards = [
     z: "z-20",
   },
   {
-    src: event2,
+    type: "video",
+    src: video4,
+    poster: event2,
+    hoverPlay: true,
     brand: "Fam Fest",
     tag: "360",
     title: "AFUSIC",
@@ -24,41 +49,35 @@ const featuredCards = [
     position: "lg:translate-y-2",
     z: "z-30",
   },
-  {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/686b959b09dca3375fba5ba4_1.avif",
-    brand: "hema",
-    tag: "social",
-    title: "hema",
-    rotation: -3,
-    position: "lg:-translate-y-3",
-    z: "z-20",
-  },
 ];
 
 const moreCards = [
   {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668b10ee9a57f9367edf77_Ferry.avif",
-    brand: "netflix",
+    type: "video",
+    src: video2,
+    poster: event5,
+    hoverPlay: true,
+    brand: "ILMA",
     tag: "video",
-    title: "city nights",
+    title: "ASIM AZHAR",
     rotation: 3,
     position: "",
     z: "z-20",
   },
   {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
-    brand: "kfc",
-    tag: "design",
-    title: "midnight",
+    src: event6,
+    brand: "Event",
+    tag: "ASIM AZHAR",
+    title: "ASIM AZHAR",
     rotation: -5,
     position: "",
     z: "z-20",
   },
   {
-    src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668570b1d8971ed16d3beb_02.avif",
-    brand: "prime",
+    src: event3,
+    brand: "Tour",
     tag: "web",
-    title: "brand",
+    title: "ASIM ALI TOUR",
     rotation: 2,
     position: "",
     z: "z-20",

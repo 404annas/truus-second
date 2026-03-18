@@ -13,6 +13,15 @@ import arrowDown from "../assets/svgs/arrow-d.svg";
 
 import event1 from "../assets/images/event1.jpeg"
 import event2 from "../assets/images/event2.jpeg"
+import event3 from "../assets/images/poster.jpeg"
+import event5 from "../assets/images/event5.jpg"
+import event4 from "../assets/images/event4.jpg"
+import event6 from "../assets/images/event6.jpg"
+
+import video1 from "../assets/videos/video1.mp4"
+import video2 from "../assets/videos/video2.MP4"
+import video3 from "../assets/videos/video3.MP4"
+import video4 from "../assets/videos/video4.mp4"
 
 const defaultCards = [
   {
@@ -58,6 +67,7 @@ const WorkCards = ({
 
   const containerRef = useRef(null);
   const cardRefs = useRef([]);
+  const videoRefs = useRef(new Map());
   const mousePositionRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -181,6 +191,31 @@ const WorkCards = ({
     },
   };
 
+  const handleVideoMouseEnter = (index) => {
+    const video = videoRefs.current.get(index);
+    if (!video) return;
+    video.muted = true;
+    video.loop = true;
+    const playPromise = video.play();
+    if (playPromise?.catch) {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const handleVideoMouseLeave = (index) => {
+    const video = videoRefs.current.get(index);
+    if (!video) return;
+    video.pause();
+    try {
+      video.currentTime = 0;
+    } catch {
+      // Ignore if video isn't ready yet
+    }
+    if (video.poster) {
+      video.load();
+    }
+  };
+
   return (
     <section
       data-navbar-theme="dark"
@@ -233,6 +268,16 @@ const WorkCards = ({
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
+                onMouseEnter={() => {
+                  if (card.type === "video" && card.hoverPlay) {
+                    handleVideoMouseEnter(index);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (card.type === "video" && card.hoverPlay) {
+                    handleVideoMouseLeave(index);
+                  }
+                }}
                 className={`relative ${card.z} ${card.position} w-[300px] md:w-[340px] h-[500px] md:h-[560px] rounded-[28px] border-4 border-white overflow-hidden shadow-2xl`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -240,23 +285,43 @@ const WorkCards = ({
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <img
-                  src={card.src}
-                  alt={card.title}
-                  className="w-full h-full object-cover"
-                />
+                {card.type === "video" ? (
+                  <video
+                    ref={(el) => {
+                      if (el) {
+                        videoRefs.current.set(index, el);
+                      } else {
+                        videoRefs.current.delete(index);
+                      }
+                    }}
+                    src={card.src}
+                    poster={card.poster}
+                    autoPlay={!card.hoverPlay}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <img
+                    src={card.src}
+                    alt={card.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/10 to-black/55" />
 
-                <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-base font-bold px-4 py-2 rounded epilogue">
+                {/* <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-base font-bold px-4 py-2 rounded epilogue">
                   {Icon && <Icon size={16} />}
                   {tag?.label || card.tag}
-                </div>
+                </div> */}
 
                 <div className="absolute bottom-[60px] left-1/2 -translate-x-1/2 bg-[#f4523a] text-black px-4 py-1.5 rounded-full text-base font-semibold dm-sans">
                   {card.brand}
                 </div>
 
-                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-pre-line text-center text-lg md:text-3xl epilogue font-extrabold ">
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-pre-line text-center text-lg md:text-2xl epilogue font-extrabold ">
                   <p>{card.title}</p>
                 </div>
               </motion.article>
