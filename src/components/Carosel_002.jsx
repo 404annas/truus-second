@@ -103,7 +103,7 @@ const Carousel_002 = ({
                         }
                         : false
                 }
-                className="Carousal_002 h-[520px] md:h-[560px] w-[250px] sm:w-[280px] md:w-[330px] "
+                className="Carousal_002 h-[420px] sm:h-[470px] md:h-[560px] w-[210px] sm:w-[250px] md:w-[330px] "
                 modules={[EffectCards, Autoplay, Pagination, Navigation]}
             >
                 {images.map((image, index) => (
@@ -153,7 +153,7 @@ const Carousel_002 = ({
                                 )}
                                 {image.title && (
                                     <motion.p
-                                        className="absolute w-full -bottom-[25%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-2xl  "
+                                        className="absolute w-full -bottom-[22%] md:-bottom-[12%] text-center text-white font-extrabold epilogue text-lg sm:text-xl md:text-2xl"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{
                                             opacity: isActive ? 1 : 0,

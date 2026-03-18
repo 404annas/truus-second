@@ -113,7 +113,7 @@ const TextAnimation = () => {
 
                 <div className="flex items-center">
                     <div className="whitespace-nowrap flex gap-4 items-end">
-                        <h1  className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl shadow-font font-extrabold text-white tracking-wide relative">
+                        <h1  className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl shadow-font font-extrabold text-white tracking-wide relative">
                             Making Every Event Special.
 
                             <img

@@ -14,7 +14,7 @@ export default function Agency() {
                 <span className='mt-2 sm:mt-4 relative shadow-font inline-block'>
                     we handle it all.
                     <img
-                        className='absolute -top-1 sm:-top-2 lg:-top-10 right-0 sm:right-2 lg:-right-24 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28'
+                        className='absolute top-10 sm:-top-2 lg:-top-10 right-0 sm:right-2 lg:-right-24 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28'
                         src={heart}
                         alt=""
                     />

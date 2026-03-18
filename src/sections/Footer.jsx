@@ -39,14 +39,14 @@ const Footer = () => {
       <div className="relative bg-gradient-to-b from-[#002744] via-[#002744] to-[#015696] text-white rounded-3xl w-full h-full p-6 md:p-8 overflow-hidden flex flex-col">
         {/* --- Content Columns --- */}
         {/* Responsive grid gap and top margin */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-8 md:mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mt-2 md:mt-6">
           {/* Column 1: Services */}
           <div className="space-y-3">
             <div className="bg-white/90 text-black text-sm font-semibold px-4 py-1.5 rounded-full w-fit">
               services
             </div>
             {/* Responsive font size */}
-            <h3 className="text-lg md:text-xl font-extrabold man">
+            <h3 className="text-base sm:text-lg md:text-xl font-extrabold man">
               music production <br />
               recording studio <br />
               mixing & mastering <br />
@@ -62,7 +62,7 @@ const Footer = () => {
               pages
             </div>
             {/* Responsive font size */}
-            <h3 className="text-lg md:text-xl font-extrabold man">
+            <h3 className="text-base sm:text-lg md:text-xl font-extrabold man">
               our artsits <br />{" "}
               <Link to={"/work"} onClick={() => scrollTo(0, 0)}>
                 our events
@@ -76,7 +76,7 @@ const Footer = () => {
               contact
             </div>
             {/* Responsive font size */}
-            <h3 className="text-lg md:text-xl font-extrabold man">
+            <h3 className="text-base sm:text-lg md:text-xl font-extrabold man">
               <button
                 type="button"
                 onClick={() =>
@@ -141,32 +141,32 @@ const Footer = () => {
           <img
             src={stickerBam}
             alt="Bam sticker"
-            className="absolute bottom-10 left-[2%] w-16 transform -rotate-12 md:bottom-16 md:left-[5%] md:w-24"
+            className="hidden md:block absolute bottom-10 left-[2%] w-16 transform -rotate-12 md:bottom-16 md:left-[5%] md:w-24"
           />
           <img
             src={stickerSmiley}
             alt="Smiley sticker"
-            className="absolute top-4 left-[25%] w-16 sm:w-18 md:top-10 md:left-[20%] md:w-20"
+            className="hidden md:block absolute top-4 left-[25%] w-16 sm:w-18 md:top-10 md:left-[20%] md:w-20"
           />
           <img
             src={stickerHeart}
             alt="Heart sticker"
-            className="absolute bottom-12 left-[40%] w-16 sm:w-18 md:bottom-16 md:left-[35%] md:w-20"
+            className="hidden md:block absolute bottom-12 left-[40%] w-16 sm:w-18 md:bottom-16 md:left-[35%] md:w-20"
           />
           <img
             src={stickerHands}
             alt="Hands sticker"
-            className="absolute top-2 left-[55%] w-16 transform rotate-12 sm:w-18 md:top-7 md:left-[40%] md:w-20"
+            className="hidden md:block absolute top-2 left-[55%] w-16 transform rotate-12 sm:w-18 md:top-7 md:left-[40%] md:w-20"
           />
           <img
             src={sticker100}
             alt="100 sticker"
-            className="absolute top-4 left-[70%] w-16 transform -rotate-12 sm:w-20 md:bottom-20 md:left-[55%] md:w-24"
+            className="hidden md:block absolute top-4 left-[70%] w-16 transform -rotate-12 sm:w-20 md:bottom-20 md:left-[55%] md:w-24"
           />
           <img
             src={stickerCamera}
             alt="Camera sticker"
-            className="absolute bottom-10 right-[2%] w-20 sm:right-[5%] md:bottom-16 md:left-[80%] md:right-auto md:w-24 drop-shadow-[0_0_3px_rgba(255,255,255,0.7)]"
+            className="hidden md:block absolute bottom-10 right-[2%] w-20 sm:right-[5%] md:bottom-16 md:left-[80%] md:right-auto md:w-24 drop-shadow-[0_0_3px_rgba(255,255,255,0.7)]"
           />
         </div>
         {/* --- Credits Button --- */}

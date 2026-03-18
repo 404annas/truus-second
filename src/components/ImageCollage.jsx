@@ -1,12 +1,8 @@
 // src/components/ImageCollage.jsx
 
-import React, { useLayoutEffect, useRef, useCallback } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import collage1 from "../assets/images/collage1.avif";
-import collage2 from "../assets/images/collage2.avif";
-import collage3 from "../assets/images/collage3.avif";
-import collage4 from "../assets/images/collage4.avif";
 import blueDoodle from "../assets/svgs/blue-doodle3.svg";
 
 import plan1 from "../assets/images/plan1.png"
@@ -24,7 +20,7 @@ const imageData = [
     alt: "People at a table",
     tag: "Live Event Experiences",
     tagColor: "bg-pink-300",
-    position: "absolute top-[10%] left-0 z-10",
+    position: "absolute top-[0%] left-[4%] sm:top-[10%] sm:left-0 z-10",
     rotation: -6, // degrees
   },
   {
@@ -32,7 +28,7 @@ const imageData = [
     alt: "Man in a wizard hat",
     tag: "Music Marketing Strategy",
     tagColor: "bg-orange-500",
-    position: "absolute top-[40%]  md:top-[20%] right-1/2 md:left-1/4 z-20",
+    position: "absolute top-[0%] right-[4%] sm:top-[40%] md:top-[20%] sm:right-1/2 md:left-1/4 z-20",
     rotation: 3, // degrees
   },
   {
@@ -40,7 +36,7 @@ const imageData = [
     alt: "Man relaxing",
     tag: "Artist Campaign Execution",
     tagColor: "bg-orange-500",
-    position: "absolute top-[10%] right-0 md:right-1/4 z-30",
+    position: "absolute top-[46%] left-[4%] sm:top-[10%] sm:left-auto sm:right-0 md:right-1/4 z-30",
     rotation: -6, // degrees
   },
   {
@@ -48,7 +44,7 @@ const imageData = [
     alt: "Group at an event",
     tag: "Concert Production Experts",
     tagColor: "bg-lime-300",
-    position: "absolute top-[40%] md:top-[20%] left-1/2 md:left-[65%] z-40",
+    position: "absolute top-[46%] right-[4%] sm:top-[40%] md:top-[20%] sm:right-auto sm:left-1/2 md:left-[65%] z-40",
     rotation: 3, // degrees
   },
 ];
@@ -169,17 +165,17 @@ const ImageCollage = () => {
         />
 
         {/* --- Image Container for Parallax --- */}
-        <div ref={imagesRef} className="relative w-full h-[50vh] lg:h-[80vh]">
+        <div ref={imagesRef} className="relative w-full h-[72vh] sm:h-[50vh] lg:h-[80vh]">
           {imageData.map((image, index) => (
             <div
               key={index}
               ref={(el) => (imageRefs.current[index] = el)}
-              className={`shadow-lg w-[150px] sm:w-[180px] md:w-[220px] lg:w-[250px] sm:shadow-xl rounded-xl sm:rounded-2xl overflow-hidden ${image.position}`}
+              className={`shadow-lg w-[43%] max-w-[160px] sm:w-[180px] md:w-[220px] lg:w-[250px] sm:max-w-none sm:shadow-xl rounded-xl sm:rounded-2xl overflow-hidden ${image.position}`}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-88 object-cover  "
+                className="w-full h-44 sm:h-88 object-cover"
               />
 
               {image.tag && (
@@ -187,7 +183,7 @@ const ImageCollage = () => {
                   className={`absolute bottom-2 sm:bottom-3 lg:bottom-4 right-2 sm:right-3 lg:right-4 text-black text-xs sm:text-sm font-semibold p-1.5 sm:p-2 rounded-md sm:rounded-lg ${image.tagColor}`}
                 >
                   <span className="hidden sm:inline">{image.tag}</span>
-                  <span className="sm:hidden">
+                  <span className="sm:hidden sm:text-base text-[10px]">
                     {image.tag.length > 15
                       ? image.tag.substring(0, 15) + "..."
                       : image.tag}
@@ -198,7 +194,7 @@ const ImageCollage = () => {
           ))}
         </div>
       </div>
-      <p className="dm-sans font-light text-white text-center max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl pt-24 lg:pt-10 px-2 sm:px-0 pb-8">
+      <p className="dm-sans font-light text-white text-center max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl sm:pt-24 lg:pt-10 px-2 sm:px-0 pb-8">
         We are a live entertainment company focused on producing concerts,
         public shows, and large-scale events. From securing talent to full-scale
         production, we bring vision, sound, and crowd energy together to create

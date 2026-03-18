@@ -140,6 +140,26 @@ input[type="button"],
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
 }
 
+@media (max-width: 767px) {
+  .project-cursor,
+  .click-cursor {
+    display: none !important;
+  }
+
+  .project-carousel .swiper-slide {
+    cursor: auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"],
+  [data-cursor-click] {
+    cursor: pointer;
+  }
+}
+
 .logo-on-dark {
   filter: brightness(0) invert(1);
 }
@@ -339,4 +359,3 @@ transform: scale(100);
 .swiper-stack{
   overflow: visible !important;
 }
-
