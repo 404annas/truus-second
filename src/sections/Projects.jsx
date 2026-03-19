@@ -163,7 +163,7 @@ const Projects = () => {
                 setCursorVisible(false);
             }}
         >
-            <div className="relative flex-1 flex justify-center items-center mt-10 project-cursor-zone">
+            <div className="relative flex-1 flex justify-center items-center sm:mt-10 project-cursor-zone">
                 <div ref={cursorRef} className={`project-cursor ${cursorVisible ? 'is-visible' : ''}`}>
                     <span className="project-cursor__pill man bg-[#015696] text-white">drag</span>
                     <img className="project-cursor__icon" src="/cursor.svg" alt="" aria-hidden="true" />
@@ -174,7 +174,7 @@ const Projects = () => {
                     paths={[{ d: "M11.1056 107.429C11.1056 107.429 41.3921 75.9563 1.85536 45.3846C39.6893 67.1983 37.5729 21.5813 34.6647 13.925C40.0573 22.0799 72.2872 32.0642 78.2717 2.44878" }]}
                     viewBox={"0 0 80 109"}
                 />
-                <img src={greenDoodle} className="absolute right-0 sm:right-[20%] bottom-7 md:bottom-[2%] w-64 md:w-96 h-auto " />
+                <img src={greenDoodle} className="absolute right-0 sm:right-[20%] bottom-7 md:bottom-[2%] w-64 md:w-96 h-auto sm:block hidden" />
 
                 {/* The main container is now just for sizing and positioning */}
                 <Carousel_002
@@ -185,7 +185,7 @@ const Projects = () => {
                 />
             </div>
 
-            <div className='flex flex-col gap-2 items-center mb-6 mt-20 sm:mt-8'>
+            <div className='flex flex-col gap-2 items-center mb-6 mt-0 sm:mt-8'>
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}

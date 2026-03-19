@@ -153,7 +153,7 @@ const Carousel_002 = ({
                                 )}
                                 {image.title && (
                                     <motion.p
-                                        className="absolute left-1/2 -bottom-[50%] w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 whitespace-nowrap px-2 text-center text-sm text-white font-extrabold epilogue sm:-bottom-[22%] sm:max-w-none sm:text-lg md:-bottom-[12%] md:text-xl lg:text-2xl"
+                                        className="absolute left-1/2 -bottom-[40%] w-max max-w-[calc(100vw-2rem)] -translate-x-1/2 whitespace-nowrap px-2 text-center text-sm text-white font-extrabold epilogue sm:-bottom-[22%] sm:max-w-none sm:text-lg md:-bottom-[12%] md:text-xl lg:text-2xl"
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{
                                             opacity: isActive ? 1 : 0,
