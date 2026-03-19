@@ -163,7 +163,7 @@ const Projects = () => {
                 setCursorVisible(false);
             }}
         >
-            
+
             <div className="relative flex-1 flex justify-center items-center sm:mt-10 project-cursor-zone">
                 <div ref={cursorRef} className={`project-cursor ${cursorVisible ? 'is-visible' : ''}`}>
                     <span className="project-cursor__pill man bg-[#015696] text-white">drag</span>
@@ -186,7 +186,7 @@ const Projects = () => {
                 />
             </div>
 
-            <div className='flex flex-col gap-2 items-center mb-6 mt-0 sm:mt-8'>
+            <div className='flex flex-col gap-2 items-center mb-6 -translate-y-8 mt-0 sm:mt-8'>
                 <Link
                     to="/work"
                     onClick={() => window.scrollTo(0, 0)}
