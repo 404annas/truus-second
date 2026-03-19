@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -17,10 +18,17 @@ const initialForm = {
   message: "",
 };
 
+const emailJsConfig = {
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+};
+
 const ContactForm = () => {
   const [formData, setFormData] = useState(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState("");
+  const [statusType, setStatusType] = useState("idle");
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -28,19 +36,53 @@ const ContactForm = () => {
       ...current,
       [name]: value,
     }));
-    if (statusMessage) setStatusMessage("");
+    if (statusMessage) {
+      setStatusMessage("");
+      setStatusType("idle");
+    }
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const { serviceId, templateId, publicKey } = emailJsConfig;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatusType("error");
+      setStatusMessage("Email service is not configured yet. Add the EmailJS env keys and try again.");
+      return;
+    }
+
     setIsSubmitting(true);
     setStatusMessage("");
+    setStatusType("idle");
 
-    await new Promise((resolve) => window.setTimeout(resolve, 1600));
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          query: formData.query,
+          message: formData.message,
+          reply_to: formData.email,
+        },
+        {
+          publicKey,
+        }
+      );
 
-    setFormData(initialForm);
-    setIsSubmitting(false);
-    setStatusMessage("We’ve received your query and will get back to you soon.");
+      setFormData(initialForm);
+      setStatusType("success");
+      setStatusMessage("Your message has been sent successfully. We’ll get back to you soon.");
+    } catch (error) {
+      console.error("EmailJS send failed", error);
+      setStatusType("error");
+      setStatusMessage("We couldn’t send your message right now. Please try again in a moment.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -169,7 +211,7 @@ const ContactForm = () => {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
-                  className="man text-sm text-white"
+                  className={`man text-sm ${statusType === "error" ? "text-[#ffd7d7]" : "text-white"}`}
                 >
                   {statusMessage}
                 </motion.p>
