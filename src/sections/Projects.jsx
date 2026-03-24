@@ -57,12 +57,6 @@ const Projects = () => {
     const images = [
         {
             type: "video",
-            title: "Sync Events",
-            src: video1,
-            alt: "Project video 1",
-        },
-        {
-            type: "video",
             src: video3,
             poster: event1,
             hoverPlay: true,
@@ -92,37 +86,43 @@ const Projects = () => {
             sticker2: "✨ 360"
         },
         {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/686b959b09dca3375fba5ba4_1.avif",
-            alt: "Project image 5",
-            title: "Hema",
-            subtitle: "socials",
-            sticker1: stickerJoinClub,
-            sticker2: "👍🏻 social"
+            type: "video",
+            title: "Sync Events",
+            src: video1,
+            alt: "Project video 1",
         },
-        {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668b10ee9a57f9367edf77_Ferry.avif",
-            alt: "Project image 1",
-            title: "Ferry",
-            subtitle: "netflix",
-            sticker1: stickerHands,
-            sticker2: "✨ 360"
-        },
-        {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68663be0740c68b890d87ff6_kfc-kipsalon-thumbnail.avif",
-            alt: "Project image 2",
-            title: "KFC",
-            subtitle: "kipsalon",
-            sticker1: stickerGoodVibes,
-            sticker2: "👍🏻 social"
-        },
-        {
-            src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
-            alt: "Project image 3",
-            title: "Squid Game",
-            subtitle: "netflix",
-            sticker1: stickerHi,
-            sticker2: "✨ 360"
-        },
+        // {
+        //     src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/686b959b09dca3375fba5ba4_1.avif",
+        //     alt: "Project image 5",
+        //     title: "Hema",
+        //     subtitle: "socials",
+        //     sticker1: stickerJoinClub,
+        //     sticker2: "👍🏻 social"
+        // },
+        // {
+        //     src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68668b10ee9a57f9367edf77_Ferry.avif",
+        //     alt: "Project image 1",
+        //     title: "Ferry",
+        //     subtitle: "netflix",
+        //     sticker1: stickerHands,
+        //     sticker2: "✨ 360"
+        // },
+        // {
+        //     src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/68663be0740c68b890d87ff6_kfc-kipsalon-thumbnail.avif",
+        //     alt: "Project image 2",
+        //     title: "KFC",
+        //     subtitle: "kipsalon",
+        //     sticker1: stickerGoodVibes,
+        //     sticker2: "👍🏻 social"
+        // },
+        // {
+        //     src: "https://cdn.prod.website-files.com/683863cbe1f5a81b667b9939/6866999038def993f6901d98_c4b0a4b3-aa91-4239-85ab-0d24b205d802.avif",
+        //     alt: "Project image 3",
+        //     title: "Squid Game",
+        //     subtitle: "netflix",
+        //     sticker1: stickerHi,
+        //     sticker2: "✨ 360"
+        // },
         {
             src: event4,
             alt: "Project image 4",
@@ -181,6 +181,7 @@ const Projects = () => {
                 <Carousel_002
                     images={images}
                     loop={true}
+                    initialSlide={Math.floor(images.length / 2)}
                     spaceBetween={"1000px"}
                     className="project-carousel"
                 />

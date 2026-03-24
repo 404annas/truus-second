@@ -91,10 +91,6 @@ const ContactForm = () => {
       data-navbar-theme="dark"
       className="relative overflow-hidden bg-gradient-to-b from-[#00192b] to-[#015696] py-10 text-white px-4 sm:px-8 lg:px-12"
     >
-      <div className="absolute inset-0">
-        <div className="absolute left-0 top-0 h-40 w-40 rounded-full border border-white/10" />
-        <div className="absolute right-10 top-0 h-28 w-28 rounded-full border border-white/10" />
-      </div>
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
         <div className="max-w-xl">

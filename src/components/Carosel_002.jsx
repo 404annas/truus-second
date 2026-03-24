@@ -17,9 +17,20 @@ const Carousel_002 = ({
     loop = true,
     autoplay = false,
     spaceBetween = 40,
+    initialSlide = 0,
     ...rest
 }) => {
     const videoRefs = useRef(new Map());
+    const renderedImages =
+        loop && images.length < 9
+            ? [
+                ...images,
+                ...Array.from({ length: 9 - images.length }, (_, index) => ({
+                    isGhost: true,
+                    id: `ghost-slide-${index}`,
+                })),
+            ]
+            : images;
 
     const handleVideoMouseEnter = (index) => {
         const video = videoRefs.current.get(index);
@@ -53,6 +64,13 @@ const Carousel_002 = ({
   }
   .swiper-slide-shadow {
     display: none !important;
+  }
+  .Carousal_002 .swiper-slide.is-ghost {
+    opacity: 0 !important;
+    pointer-events: none;
+    border-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
   `;
     return (
@@ -88,6 +106,14 @@ const Carousel_002 = ({
                 // ----------------------------------
                 grabCursor={false}
                 loop={loop}
+                initialSlide={initialSlide}
+                onAfterInit={(swiper) => {
+                    if (loop) {
+                        swiper.slideToLoop(initialSlide, 0, false);
+                        return;
+                    }
+                    swiper.slideTo(initialSlide, 0, false);
+                }}
                 pagination={
                     showPagination
                         ? {
@@ -106,26 +132,28 @@ const Carousel_002 = ({
                 className="Carousal_002 h-[250px] sm:h-[470px] md:h-[560px] w-[120px] sm:w-[250px] md:w-[330px] "
                 modules={[EffectCards, Autoplay, Pagination, Navigation]}
             >
-                {images.map((image, index) => (
+                {renderedImages.map((image, index) => (
                     <SwiperSlide
-                        key={index}
-                        className="swiper-stack rounded-3xl relative border-4 border-white bg-white"
+                        key={image.id ?? index}
+                        className={`swiper-stack rounded-3xl relative border-4 border-white bg-white ${image.isGhost ? "is-ghost" : ""}`}
                     >
                         {({ isActive }) => (
                             <div
                                 className="h-full w-full"
                                 onMouseEnter={() => {
-                                    if (image.type === "video" && image.hoverPlay) {
+                                    if (!image.isGhost && image.type === "video" && image.hoverPlay) {
                                         handleVideoMouseEnter(index);
                                     }
                                 }}
                                 onMouseLeave={() => {
-                                    if (image.type === "video" && image.hoverPlay) {
+                                    if (!image.isGhost && image.type === "video" && image.hoverPlay) {
                                         handleVideoMouseLeave(index);
                                     }
                                 }}
                             >
-                                {image.type === "video" ? (
+                                {image.isGhost ? (
+                                    <div aria-hidden="true" className="h-full w-full rounded-3xl" />
+                                ) : image.type === "video" ? (
                                     <video
                                         ref={(el) => {
                                             if (el) {
