@@ -13,6 +13,8 @@ import video1 from "../assets/videos/video1.mp4";
 import video2 from "../assets/videos/video2.MP4";
 import video3 from "../assets/videos/video3.MP4";
 import video4 from "../assets/videos/video4.mp4";
+import Seo from "../components/Seo";
+import { siteConfig, toAbsoluteUrl } from "../lib/seo";
 
 const featuredCards = [
   {
@@ -85,8 +87,32 @@ const moreCards = [
 ];
 
 const Work = () => {
+  const pageTitle = "Our Work | The Sync Events";
+  const pageDescription =
+    "Explore The Sync Events portfolio across concerts, festivals, artist campaigns, and branded live experiences.";
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: pageTitle,
+    url: `${siteConfig.siteUrl}/work`,
+    description: pageDescription,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.siteName,
+      url: siteConfig.siteUrl,
+    },
+    image: toAbsoluteUrl(siteConfig.defaultImage),
+  };
+
   return (
     <div data-navbar-theme="dark" className="relative bg-black text-white">
+      <Seo
+        title={pageTitle}
+        description={pageDescription}
+        path="/work"
+        type="website"
+        schema={schema}
+      />
       <img
         src={arrowDoodle}
         alt=""
